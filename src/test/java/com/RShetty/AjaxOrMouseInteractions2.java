@@ -13,9 +13,10 @@ public class AjaxOrMouseInteractions2 {
 
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.amazon.in/");
+        driver.manage().window().maximize();
         Actions a = new Actions(driver);
         WebElement move = driver.findElement(By.xpath("//span[text()='Account & Lists']"));
-        a.moveToElement(driver.findElement(By.id("twotabsearchtextbox"))).click().keyDown(Keys.SHIFT).sendKeys("hello").build().perform();
+        a.moveToElement(driver.findElement(By.id("twotabsearchtextbox"))).click().keyDown(Keys.SHIFT).sendKeys("hello").doubleClick().build().perform();
         a.moveToElement(move).contextClick().build().perform();
     }
 }
