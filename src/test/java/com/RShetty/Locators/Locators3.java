@@ -1,4 +1,4 @@
-package com.RShetty;
+package com.RShetty.Locators;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

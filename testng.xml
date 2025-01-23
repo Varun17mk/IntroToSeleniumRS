@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LoansTestCases">
+    <test verbose="2" preserve-order="true" name="CarLoan">
+        <classes>
+            <class name="TestNgTutorial.CarLoanModule">
+                <methods>
+                    <include name="WebLoginCarLoan"/>
+                    <include name="MobileLoginCarLoan"/>
+                    <include name="APILoginCarLoan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="PersonalLoan">
+        <classes>
+            <class name="TestNgTutorial.personalLoanModule">
+                <methods>
+                    <exclude name="PL15I"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="HomeLoan">
+
+        <classes>
+            <class name="TestNgTutorial.HomeLoanModule">
+                <methods>
+                    <include name="HL15I"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="EducationalLoan">
+
+        <classes>
+            <class name="TestNgTutorial.EducationalLoan">
+                <methods>
+                    <exclude name="el.*"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
